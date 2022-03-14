@@ -11,11 +11,11 @@ point = 0
 
 for a in 0..N-1
   if d[a] == 5 || d[a] == 15 || d[a] ==  25
-      point += (p[a] * 0.05).to_i
-  elsif d[a] == 3 || d[a] == 13 || d[a] == 23 || d[a] == 30
-      point += (p[a] * 0.03).to_i
+      point += (p[a] * 0.05).floor
+  elsif d[a] == 3 || d[a] == 13 || d[a] == 23 || d[a] == 30 || d[a] == 31
+      point += (p[a] * 0.03).floor
   else
-      point += (p[a] * 0.01).to_i
+      point += (p[a] * 0.01).floor
   end
 end
 
